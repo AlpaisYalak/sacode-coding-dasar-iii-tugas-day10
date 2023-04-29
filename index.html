@@ -8,16 +8,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="user">
-        <img src="images/image.png">
+
+    
+    <div class="user hide-details" id="userBox">
+        <img src="images/image.png" onclick="openinfo()">
         <div class="info">
             <h1>Alpais Yalak</h1>
-            <p>Working as a product manager at Microsoft Inc.</p>
+            <p>Working as a product manager at <span>Microsoft Inc.</span></p>
             <p>From: West Papua</p>
             <a href="#">Contact with me</a>
 
         </div>
+        <div class="close-icon" onclick="closeinfo()"></div>
     </div>
+
+    <script>
+
+    let userBox = document.getElementById("userBox");
+
+    function openinfo(){
+        userBox.classList.remove("hide-details");
+    }
+    function closeinfo(){
+         userBox.classList.add("hide-details");
+    }
+   
+    
+    </script>
     
 </body>
 </html>
